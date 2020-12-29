@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "elements/Button";
+import formatNumber from "utils/formatNumber";
 
 export default function Hero(props) {
   const showMostPicked = () => {
@@ -8,6 +9,7 @@ export default function Hero(props) {
       behavior: "smooth",
     });
   };
+
   const count = [
     {
       key: "travelers",
@@ -59,7 +61,7 @@ export default function Hero(props) {
                     alt={`${props.data[e.key]} ${e.label}`}
                   />
                   <h6 className="mt-3">
-                    {props.data[e.key]}
+                    {formatNumber(props.data[e.key])}
                     <span className="text-gray-500 font-weight-light ml-1">
                       {e.label}
                     </span>
