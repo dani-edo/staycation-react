@@ -1,6 +1,4 @@
 import React from "react";
-import ImageHero from "assets/images/img-hero.png";
-import ImageHero_ from "assets/images/img-hero-frame.png";
 import Button from "elements/Button";
 
 export default function Hero(props) {
@@ -75,13 +73,13 @@ export default function Hero(props) {
         <div className="col-6 pl-5">
           <div style={{ width: 520, height: 410 }}>
             <img
-              src={ImageHero}
+              src="images/img-hero.png"
               alt="Room with couches"
               className="img-fluid position-absolute"
               style={{ margin: "-30px 0 0 -30px", zIndex: 1 }}
             />
             <img
-              src={ImageHero_}
+              src="images/img-hero-frame.png"
               alt="Room with couches frame"
               className="img-fluid position-absolute"
               style={{ margin: "0 -15px -15px 0" }}
