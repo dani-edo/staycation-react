@@ -49,3 +49,17 @@
 // Utilities
 @import "utilities/api";
 // scss-docs-end import-stack
+
+@each $color,
+$value in $grays {
+    .text-gray-#{$color} {
+        color: $value;
+    }
+}
+
+.brand-text-icon {
+    font-size: 26px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    color: $primary;
+}
