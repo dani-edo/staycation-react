@@ -4,8 +4,8 @@ import formatNumber from "utils/formatNumber";
 
 export default function Hero(props) {
   const showMostPicked = () => {
-    window.scrollTop({
-      top: (props.refMostPicked.current.offsetTop = 30),
+    window.scrollTo({
+      top: props.refMostPicked.current.offsetTop - 30,
       behavior: "smooth",
     });
   };
