@@ -1,10 +1,14 @@
 import React, { Component } from "react";
+import Fade from "react-reveal/Fade";
 
 import Header from "parts/Header";
 import PageDetailTitle from "parts/PageDetailTitle";
 import FeaturedImage from "parts/FeaturedImage";
 import PageDetailDescription from "parts/PageDetailDescription";
 import BookingForm from "parts/BookingForm";
+import Categories from "parts/Categories";
+import Testimonial from "parts/Testimony";
+import Footer from "parts/Footer";
 
 import itemDetails from "json/itemDetails.json";
 
@@ -27,13 +31,20 @@ export default class DetailsPage extends Component {
         <section className="container">
           <div className="row">
             <div className="col-7 pr-5">
-              <PageDetailDescription data={itemDetails} />
+              <Fade bottom>
+                <PageDetailDescription data={itemDetails} />
+              </Fade>
             </div>
             <div className="col-5">
-              <BookingForm itemDetails={itemDetails} />
+              <Fade bottom>
+                <BookingForm itemDetails={itemDetails} />
+              </Fade>
             </div>
           </div>
         </section>
+        <Categories data={itemDetails.categories} />
+        <Testimonial data={itemDetails.testimonial} />
+        <Footer />
       </>
     );
   }
